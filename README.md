@@ -41,9 +41,9 @@ Tech/framework used
 Algorithm Results
 ===
 
-| #                | Word Count | Test Count | Win Total | Lose Total | Avg Win Level |
-| ---------------- | ---------- | ---------- | --------- | ---------- | ------------- |
-| EN Selected Word | 2309       | 1000       | 989       | 11         | 3.94863036    |
-| EN Full Word     | 12947      | 1000       | 894       | 106        | 4.53321065    |
-| TR Selected Word | 4599       | 1000       | 943       | 57         | 4.31491689    |
-| TR Full Word     | 10131      | 1000       | 936       | 64         | 4.41410917    |
+| #                                                       | Word Count | Test Count | Win Total | Lose Total | Avg Win Level |
+| ------------------------------------------------------- | ---------- | ---------- | --------- | ---------- | ------------- |
+| [EN Selected Word](./words/en_selected_word_list.json)  | 2309       | 1000       | 989       | 11         | 3.94863036    |
+| [EN Full Word](./words/en_full_word_list.json)          | 12947      | 1000       | 894       | 106        | 4.53321065    |
+| [TR Selected Word](./words/tr_selected_word_list.json)  | 4599       | 1000       | 943       | 57         | 4.31491689    |
+| [TR Full Word](./words//tr_full_word_list.json)         | 10131      | 1000       | 936       | 64         | 4.41410917    |
