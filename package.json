@@ -1,0 +1,25 @@
+{
+  "name": "wordle-bot",
+  "version": "1.0.0",
+  "description": "Wordle Game Bot",
+  "main": "index.js",
+  "dependencies": {
+    "puppeteer": "^13.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-loader": "^4.0.2",
+    "eslint-config-airbnb-base": "^14.2.1"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "start-tr": "WORDLE_LANG=TR node src/index.js",
+    "start-tr-full": "WORDLE_LANG=TR LIST_TYPE=full node src/index.js",
+    "start-en": "WORDLE_LANG=TR node src/index.js",
+    "start-en-full": "WORDLE_LANG=TR LIST_TYPE=full node src/index.js",
+    "test-algorithm":"node test/testAlgorithm.js"
+  },
+  "author": "Murat Deniz <muratdbisevac@gmail.com>",
+  "license": "ISC"
+}

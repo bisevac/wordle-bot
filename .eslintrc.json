@@ -1,0 +1,31 @@
+{
+  "extends": "airbnb-base",
+  "globals": {
+    "$config": true,
+    "$container":true,
+    "$log": true,
+    "$logger": true,
+    "$enum": true,
+    "document": true
+  },
+  "rules":{
+    "key-spacing": ["error", {"beforeColon": true, "afterColon": true, "align": "colon"}],
+    "no-multi-spaces": ["error", { "ignoreEOLComments": true,"exceptions": { "BinaryExpression": true,"ImportDeclaration": true,"VariableDeclarator": true } }],
+    "space-before-function-paren": ["error", "always"],
+    "max-len": ["error", 140],
+    "space-in-parens": ["error", "always"],    
+    "no-underscore-dangle": 0,
+    "camelcase" : 0,
+    "no-this-before-super":"off",
+    "no-await-in-loop":"off",
+    "no-console":"off"
+  },
+  "env": {
+    "node": true,
+    "es2020": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 11
+  }
+}
