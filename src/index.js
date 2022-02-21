@@ -2,7 +2,7 @@ const BrowserLaunch = require( './browser/BrowserLaunch' );
 const BrowserNavitage = require( './browser/scripts/BrowserNavitage' );
 const StageIsWin = require( './lib/StageIsWin' );
 const { exitProcess } = require( './lib/util' );
-const WordAlgorithm = require( './lib/WordAlgorithm' );
+const WordleAlgorithm = require( './lib/WordleAlgorithm' );
 const GetStatus = require( './browser/scripts/GetStatus' );
 const TryWord = require( './browser/scripts/TryWord' );
 const ClosePopup = require( './browser/scripts/ClosePopup' );
@@ -21,10 +21,10 @@ const listType = process.env.LIST_TYPE || 'selected';
     await ClosePopup( page );
 
     await page.waitForTimeout( 500 );
-    const wordAlgorithm = new WordAlgorithm( lang, listType );
+    const wordleAlgorithm = new WordleAlgorithm( lang, listType );
 
     for ( let i = 1; i <= 6; i += 1 ) {
-      const randomWord = wordAlgorithm.getRandomHitWord();
+      const randomWord = wordleAlgorithm.getRandomHitWord();
       await TryWord( page, randomWord );
 
       await page.waitForTimeout( 2000 );
@@ -34,7 +34,7 @@ const listType = process.env.LIST_TYPE || 'selected';
         break;
       }
 
-      wordAlgorithm.filterWord( stageStatus );
+      wordleAlgorithm.filterWord( stageStatus );
       await page.waitForTimeout( 500 );
     }
   } catch ( error ) {

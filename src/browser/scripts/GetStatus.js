@@ -26,5 +26,6 @@ module.exports = async ( page, stage ) => {
     stageStatus.push( { ...status, order : i } );
   }
 
+  console.log( 'Stage Status', stageStatus );
   return stageStatus;
 };

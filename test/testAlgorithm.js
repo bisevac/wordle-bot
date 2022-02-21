@@ -1,8 +1,8 @@
-const WordAlgorithm = require( '../src/lib/WordAlgorithm' );
+const WordleAlgorithm = require( '../src/lib/WordleAlgorithm' );
 const checkWord = require( '../src/lib/CheckWord' );
 
-const lang = 'TR'; // TR | EN
-const listType = 'full'; // selected | full
+const lang = 'EN'; // TR | EN
+const listType = 'selected'; // selected | full
 
 let winTotal = 0;
 let loseTotal = 0;
@@ -18,13 +18,13 @@ let avgWinLevel = 0;
 
 const testInit = ( t ) => {
   try {
-    const wordAlgorithm = new WordAlgorithm( lang, listType );
-    const randomWord = wordAlgorithm.getRandomWord();
+    const wordleAlgorithm = new WordleAlgorithm( lang, listType );
+    const randomWord = wordleAlgorithm.getRandomWord();
 
     let tryWord;
 
     for ( let i = 1; i <= 6; i += 1 ) {
-      tryWord = wordAlgorithm.getRandomHitWord();
+      tryWord = wordleAlgorithm.getRandomHitWord();
 
       if ( tryWord === randomWord ) {
         console.log( `RandomWord [${randomWord}] STATUS [WIN] STAGE IS [${i}]` );
@@ -37,7 +37,7 @@ const testInit = ( t ) => {
       }
 
       const checkStatus = checkWord( randomWord, tryWord );
-      wordAlgorithm.filterWord( checkStatus );
+      wordleAlgorithm.filterWord( checkStatus );
     }
 
     console.log( `RandomWord [${randomWord}] STATUS [LOSE]` );

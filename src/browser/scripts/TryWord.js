@@ -1,4 +1,6 @@
 module.exports = async ( page, word ) => {
+  console.log( `Try Word: ${word}` );
+
   for ( let i = 0; i < word.length; i += 1 ) {
     const letter = word[i];
 

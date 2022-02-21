@@ -1,9 +1,9 @@
 const fs = require( 'fs' );
 const path = require( 'path' );
 
-class WordAlgorithm {
+class WordleAlgorithm {
   constructor ( lang = 'EN', listType = 'selected' ) {
-    // console.log( `WordAlgorithm Called, ${lang} ${listType}` );
+    // console.log( `WordleAlgorithm Called, ${lang} ${listType}` );
 
     const filePath = path.resolve( __dirname, `../../words/${lang}_${listType}_word_list.json` );
     this.words = JSON.parse( fs.readFileSync( filePath ) );
@@ -77,4 +77,4 @@ class WordAlgorithm {
   }
 }
 
-module.exports = WordAlgorithm;
+module.exports = WordleAlgorithm;
